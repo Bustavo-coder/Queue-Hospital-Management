@@ -61,4 +61,17 @@ describe("test doctor managmennt", () => {
     expect(result2).toBe(false);
     console.log(database);
   });
+  test("that i can view availabale doctors", () => {
+    admin = new Admin(1700);
+    doctor = admin.register("ade", "Radiology", "Address");
+    admin.addDoctor(doctor);
+    doctor2 = admin.register("yemisi", "Dentist", "Address");
+    admin.addDoctor(doctor2);
+    doctor3 = admin.register("Quadri", "Lab Scientist", "Address");
+    admin.addDoctor(doctor3);
+    doctor4 = admin.register("Fatai", "Surgeon", "Address");
+    admin.addDoctor(doctor4);
+    admin.setDoctorsSchedule(1);
+    console.log(admin.displayAvailableDoctors());
+  });
 });

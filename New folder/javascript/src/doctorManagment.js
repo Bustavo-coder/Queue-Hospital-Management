@@ -35,7 +35,7 @@ class DoctorMangment {
     return this.storeId;
   }
 
-  setSchedule(args) {
+  setDoctorsSchedule(args) {
     available = this.storeId.filter((x) => x % 2 == args);
     base = this.database;
     available.map((doctors) => {
