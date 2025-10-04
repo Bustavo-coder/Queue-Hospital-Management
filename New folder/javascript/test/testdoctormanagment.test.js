@@ -60,6 +60,5 @@ describe("test doctor managmennt", () => {
     result2 = database.hasOwnProperty("1900");
     expect(result2).toBe(false);
     console.log(database);
-    result = admin.getDoctorById("1701");
   });
 });
