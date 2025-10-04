@@ -49,6 +49,8 @@ describe("test doctor managmennt", () => {
     expect(result2).toBe(false);
   });
   test("that i can display registerd doctors", () => {
+    admin = new Admin(1700);
+    doctor = admin.register("ade", "Radiology", "Address");
     admin.addDoctor(doctor);
     database = admin.registeredDoctor();
     result3 = database.hasOwnProperty("1701");
@@ -58,5 +60,6 @@ describe("test doctor managmennt", () => {
     result2 = database.hasOwnProperty("1900");
     expect(result2).toBe(false);
     console.log(database);
+    result = admin.getDoctorById("1701");
   });
 });

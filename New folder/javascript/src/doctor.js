@@ -25,10 +25,10 @@ class Doctor {
   getAvailability() {
     return this.availability;
   }
-  // setAvailabilty() {
-  //   if (this.availability) this.availability = false;
-  //   else this.availability = true;
-  // }
+  setAvailabilty() {
+    if (this.availability) this.availability = false;
+    else this.availability = true;
+  }
 }
 
 module.exports = Doctor;
